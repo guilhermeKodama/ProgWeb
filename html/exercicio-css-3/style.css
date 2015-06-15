@@ -15,4 +15,5 @@ body {
     height: 100px;
     margin-left: 30%;
     box-shadow: 3px 3px 3px #888888;
+    position: absolute;
 }
