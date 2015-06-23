@@ -256,7 +256,6 @@ var update = function() {
     }
 
     if(completeSquares == 25){
-      alert("GAME OVER");
       gameOver = true;
     }
   }
@@ -264,6 +263,8 @@ var update = function() {
 };
 
 var render = function() {
+
+
 
   context.fillStyle = "#e8e8e8";
   context.fillRect(0, 0, width, height);
@@ -275,6 +276,17 @@ var render = function() {
   context.font = "30px Arial";
   context.fillText("Blue Score: "+blueScore,100,400);
   context.fillText("Red Score: "+redScore,100,500);
+
+  if(gameOver){
+    if(blueScore > redScore){
+      context.fillText("BLUE WINS",100,580);
+    }else if(redScore > blueScore){
+      context.fillText("RED WINS",100,580);
+    }else{
+      context.fillText("DRAW",100,580);
+    }
+    
+  }
 
 };
 
