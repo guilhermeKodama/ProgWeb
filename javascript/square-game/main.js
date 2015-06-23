@@ -115,6 +115,8 @@ Square.prototype.isComplete = function(){
 
   } 
 
+  console.log("Numero de lados completos: "+completeSides);
+
   if(completeSides == 4){
     return true;
   }else{
@@ -298,6 +300,9 @@ function onClick(){
       if(side.wasClicked(x,y)){
 
         if(!side.selected){
+
+          side.selected = true;
+
           if(numClick % 2 == 0){
             side.color = "#ff0000";
           }else{
@@ -306,6 +311,7 @@ function onClick(){
           hitSide = true;
 
           if(squares[i].isComplete()){
+            console.log("Tem um quadrado completo");
             if(numClick % 2 == 0){
               redScore ++;
             }else{
@@ -314,8 +320,6 @@ function onClick(){
           }
 
         }
-
-        side.selected = true;
         
       }
     }
