@@ -48,9 +48,12 @@ class AlunoController extends Controller
      * @return mixed
      */
     public function actionView($id){
-    
+
+        $model = $this->findModel($id);
+        $count = Aluno::find()->where('ano_ingresso='.$model->ano_ingresso)->count();
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'count'=>$count,
         ]);
     }
 
@@ -62,6 +65,7 @@ class AlunoController extends Controller
     public function actionCreate()
     {
         $model = new Aluno();
+        
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

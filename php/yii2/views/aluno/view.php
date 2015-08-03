@@ -37,5 +37,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'ano_ingresso',
         ],
     ]) ?>
+    <?php echo "<p>Em nossa base , existem ".$count." alunos de ".$model->ano_ingresso."</p>"?>
 
 </div>
