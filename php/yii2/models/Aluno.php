@@ -30,17 +30,11 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['matricula', 'id_curso', 'ano_ingresso','nome', 'sexo'], 'required','message'=>'Este
-campo é obrigatório'],
-            [['id_curso', 'ano_ingresso'], 'integer','message'=>'Este
-campo deve conter apenas números'],
-            [['matricula'], 'required'],
+            [['matricula', 'id_curso', 'ano_ingresso','nome', 'sexo'],'required','message'=>'Este campo é obrigatório'],
             [['matricula', 'id_curso', 'ano_ingresso'], 'integer'],
-            ['matricula', 'length' => 8],
-            [['nome'], 'string', 'max' => 200,'message'=>'Este
-campo deve conter menos que 200 caracteres'],
+            [['nome'], 'string', 'max' => 200],
             [['sexo'], 'string', 'max' => 1],
-            [['matricula'], 'unique','message'=>'Essa matrícula já existe']
+            [['matricula'], 'unique']
         ];
     }
 
@@ -51,11 +45,11 @@ campo deve conter menos que 200 caracteres'],
     {
         return [
             'id' => 'ID',
-            'matricula' => 'Matrícula',
+            'matricula' => 'Matricula',
             'nome' => 'Nome',
             'sexo' => 'Sexo',
-            'id_curso' => 'ID do Curso',
-            'ano_ingresso' => 'Ano de ingresso',
+            'id_curso' => 'Id Curso',
+            'ano_ingresso' => 'Ano Ingresso',
         ];
     }
 }
