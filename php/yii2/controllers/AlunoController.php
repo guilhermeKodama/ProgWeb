@@ -46,8 +46,8 @@ class AlunoController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id){
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -118,4 +118,5 @@ class AlunoController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
 }

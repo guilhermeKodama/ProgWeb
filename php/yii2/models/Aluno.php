@@ -14,8 +14,8 @@ use Yii;
  * @property integer $id_curso
  * @property integer $ano_ingresso
  */
-class Aluno extends \yii\db\ActiveRecord
-{
+class Aluno extends \yii\db\ActiveRecord{
+
     /**
      * @inheritdoc
      */
@@ -51,5 +51,15 @@ class Aluno extends \yii\db\ActiveRecord
             'id_curso' => 'Id Curso',
             'ano_ingresso' => 'Ano Ingresso',
         ];
+    }
+
+    public function afterFind(){
+
+        parent::afterFind();
+        if($this->sexo == 'M')
+            $this->sexo = 'Masculino';
+
+        if($this->sexo == 'F')
+            $this->sexo = 'Feminino';
     }
 }
