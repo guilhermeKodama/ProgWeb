@@ -55,7 +55,7 @@ class Usuario extends \yii\db\ActiveRecord
             'nome' => 'Nome',
             'email' => 'Email',
             'tipo' => 'Tipo',
-            'data_cadastro' => 'Data Cadastro',
+            'data_cadastro' => 'Data de Hoje',
         ];
     }
 }

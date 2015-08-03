@@ -51,11 +51,11 @@ campo deve conter menos que 200 caracteres'],
     {
         return [
             'id' => 'ID',
-            'matricula' => 'Matricula',
+            'matricula' => 'Matrícula',
             'nome' => 'Nome',
             'sexo' => 'Sexo',
-            'id_curso' => 'Id Curso',
-            'ano_ingresso' => 'Ano Ingresso',
+            'id_curso' => 'ID do Curso',
+            'ano_ingresso' => 'Ano de ingresso',
         ];
     }
 }
