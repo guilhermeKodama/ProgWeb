@@ -6,7 +6,9 @@ use yii\helpers\Html;
 <div class="site-index">
 
     <div class="jumbotron">
-        <?= Html::img('@web/images/logo.png') ?><h1>Instituto de Computação</h1>
+        <?= Html::jsFile('@web/js/main.js') ?>
+        <?= Html::img('@web/images/logo.png') ?>
+        <h1 onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Instituto de Computação</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
