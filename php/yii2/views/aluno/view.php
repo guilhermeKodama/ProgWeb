@@ -2,11 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\controllers\CursoController;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Aluno */
 
 $this->title = $model->id;
+$model->id_curso = CursoController::getModel($model->id_curso)->nome;
 $this->params['breadcrumbs'][] = ['label' => 'Alunos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

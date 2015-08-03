@@ -118,4 +118,14 @@ class CursoController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    public static function getModel($id){
+        if (($model = Curso::findOne($id)) !== null) {
+            return $model;
+        } else {
+            return json_decode('{"nome":"unkwon"}');
+        }
+    }
+
+
 }

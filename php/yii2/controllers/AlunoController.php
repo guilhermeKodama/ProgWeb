@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
 /**
  * AlunoController implements the CRUD actions for Aluno model.
  */
@@ -47,7 +48,7 @@ class AlunoController extends Controller
      * @return mixed
      */
     public function actionView($id){
-
+    
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
